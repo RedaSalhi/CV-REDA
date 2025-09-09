@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reda Salhi – CV Digital Quant</title>
+  <meta name="description" content="CV en ligne de Reda Salhi – Finance quantitative, produits structurés, risque, dérivés, modélisation et data." />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
+
+  <style>
+    :root{
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --primary-light: #818cf8;
+      --secondary: #06b6d4;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --error: #ef4444;
+      
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --bg-tertiary: #f1f5f9;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: rgba(0, 0, 0, 0.1);
+      --shadow-lg: rgba(0, 0, 0, 0.15);
+      
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+      --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    html[data-theme="dark"]{
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-tertiary: #334155;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border: rgba(148, 163, 184, 0.2);
+      --shadow: rgba(0, 0, 0, 0.3);
+      --shadow-lg: rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 50px;
+      padding: 12px 20px;
+      box-shadow: 0 10px 40px var(--shadow);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    html[data-theme="dark"] .nav {
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav a:hover {
+      color: var(--primary);
+      background: rgba(99, 102, 241, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .theme-toggle, .lang-toggle {
+      background: var(--gradient-primary);
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      color: white;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 4px;
+    }
+
+    .lang-toggle {
+      background: var(--gradient-secondary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      width: 40px;
+      height: 40px;
+    }
+
+    .theme-toggle:hover, .lang-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.1) rotate(180deg);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      background: var(--gradient-bg);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .hero-content {
+      z-index: 2;
+      position: relative;
+      color: white;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: 800;
+      animation: pulse 3s ease-in-out infinite;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-pic::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      animation: rotate 3s linear infinite;
+    }
+
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 16px;
+      font-weight: 900;
+      opacity: 0;
+      animation: slideUp 1s ease 0.5s forwards;
+      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: slideUp 1s ease 0.8s forwards;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: slideUp 1s ease 1.1s forwards;
+    }
+
+    .btn {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      color: white;
+      padding: 14px 28px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover::before {
+      transform: translateX(0);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      border-color: var(--primary);
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Availability Badge */
+    .availability {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background: var(--gradient-primary);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+      z-index: 1000;
+      animation: bounce 2s ease-in-out infinite;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Sections */
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section.alt {
+      background: var(--bg-secondary);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--text-primary);
+      margin-bottom: 60px;
+      font-weight: 900;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--bg-primary);
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      transition: all 0.4s ease;
+      cursor: default;
+      transform: translateY(20px);
+      opacity: 0;
+      box-shadow: 0 10px 30px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px var(--shadow-lg);
+    }
+
+    .card h3 {
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card p, .card li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .card li::before {
+      content: '•';
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 50px 0;
+      width: 45%;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 55%;
+    }
+
+    .timeline-content {
+      background: var(--bg-primary);
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid var(--border);
+      position: relative;
+      box-shadow: 0 10px 30px var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px var(--shadow-lg);
+    }
+
+    .timeline-content::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      width: 0;
+      height: 0;
+      border: 15px solid transparent;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content::before {
+      right: -30px;
+      border-left-color: var(--bg-primary);
+    }
+
+    .timeline-item:nth-child(even) .timeline-content::before {
+      left: -30px;
+      border-right-color: var(--bg-primary);
+    }
+
+    .timeline-date {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .timeline-title {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .timeline-desc {
+      color: var(--text-secondary);
+    }
+
+    .timeline-desc ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .timeline-desc li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .timeline-desc li::before {
+      content: '▶';
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+      font-size: 0.8rem;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background: var(--bg-primary);
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      transition: all 0.4s ease;
+      transform: translateY(20px);
+      opacity: 0;
+      box-shadow: 0 10px 30px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-secondary);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .project-card.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 70px var(--shadow-lg);
+    }
+
+    .project-title {
+      color: var(--text-primary);
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .project-desc {
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .project-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 10px 20px;
+      background: var(--gradient-primary);
+      border-radius: 25px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .project-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+    }
+
+    .project-link.secondary {
+      background: var(--gradient-secondary);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .skill-category {
+      background: var(--bg-primary);
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px var(--shadow);
+      transition: all 0.3s ease;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    .skill-category.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px var(--shadow-lg);
+    }
+
+    .skill-category h3 {
+      color: var(--text-primary);
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .skill-item {
+      margin-bottom: 15px;
+    }
+
+    .skill-name {
+      color: var(--text-secondary);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .skill-level {
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .skill-bar {
+      height: 8px;
+      background: var(--bg-secondary);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background: var(--gradient-primary);
+      border-radius: 4px;
+      width: 0;
+      transition: width 2s ease 0.5s;
+      position: relative;
+    }
+
+    .skill-progress::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Contact */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .contact-item {
+      background: var(--bg-primary);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-item:hover::before {
+      transform: scaleX(1);
+    }
+
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px var(--shadow-lg);
+    }
+
+    .contact-item .icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .contact-item a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+    }
+
+    .contact-item small {
+      display: block;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero .subtitle { font-size: 1.1rem; }
+      .timeline::before { left: 20px; }
+      .timeline-item {
+        width: calc(100% - 60px);
+        left: 40px !important;
+      }
+      .timeline-content::before { display: none; }
+      .nav {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        top: 10px;
+        flex-wrap: wrap;
+        padding: 8px 12px;
+      }
+      .nav a {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+      }
+      .availability {
+        position: static;
+        margin: 20px;
+        display: inline-block;
+      }
+      .cards { grid-template-columns: 1fr; }
+      .projects { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Animations */
+    .fade-in-element {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in-element.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Loader */
+    .loader {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: opacity 0.5s ease;
+    }
+
+    .loader.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid var(--border);
+      border-top: 4px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-secondary);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* Language specific content */
+    [data-lang="en"] .lang-fr { display: none; }
+    [data-lang="fr"] .lang-en { display: none; }
+  </style>
+</head>
+<body data-lang="fr">
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <nav class="nav">
+    <a href="#apropos">
+      <span>👤</span>
+      <span class="lang-fr">À propos</span>
+      <span class="lang-en">About</span>
+    </a>
+    <a href="#experience">
+      <span>💼</span>
+      <span class="lang-fr">Expérience</span>
+      <span class="lang-en">Experience</span>
+    </a>
+    <a href="#projets">
+      <span>💻</span>
+      <span class="lang-fr">Projets</span>
+      <span class="lang-en">Projects</span>
+    </a>
+    <a href="#competences">
+      <span>⚙️</span>
+      <span class="lang-fr">Compétences</span>
+      <span class="lang-en">Skills</span>
+    </a>
+    <a href="#education">
+      <span>🎓</span>
+      <span class="lang-fr">Éducation</span>
+      <span class="lang-en">Education</span>
+    </a>
+    <a href="#contact">
+      <span>✉️</span>
+      <span class="lang-fr">Contact</span>
+      <span class="lang-en">Contact</span>
+    </a>
+    <button class="lang-toggle" id="langToggle">EN</button>
+    <button class="theme-toggle" id="themeToggle">
+      <span id="themeIcon">🌙</span>
+    </button>
+  </nav>
+
+  <div class="availability">
+    <span>📅</span>
+    <span class="lang-fr">Disponible : Fin janvier 2026</span>
+    <span class="lang-en">Available: End of January 2026</span>
+  </div>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="profile-pic">RS</div>
+      <h1>Reda Salhi</h1>
+      <p class="subtitle">
+        <span class="lang-fr">Digital Quant • Produits structurés • Dérivés & Risque • Data</span>
+        <span class="lang-en">Digital Quant • Structured Products • Derivatives & Risk • Data</span>
+      </p>
+      <div class="cta-group">
+        <a class="btn btn-primary" href="#contact">
+          <span>✉️</span>
+          <span class="lang-fr">Me contacter</span>
+          <span class="lang-en">Contact Me</span>
+        </a>
+        <a class="btn" href="#apropos">
+          <span>⬇️</span>
+          <span class="lang-fr">Découvrir</span>
+          <span class="lang-en">Discover</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="apropos" class="section fade-in-element">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-fr">À propos</span>
+          <span class="lang-en">About</span>
+        </h2>
+        <div class="cards">
+          <article class="card">
+            <h3>
+              <span>👔</span>
+              <span class="lang-fr">Profil</span>
+              <span class="lang-en">Profile</span>
+            </h3>
+            <ul class="lang-fr">
+              <li>Ingénieur (<a href="https://www.centrale-mediterranee.fr">Centrale Méditerranée</a>) orienté finance de marché & quantitative</li>
+              <li>Expériences : <a href="https://www.societegenerale.com">SG CIB</a>
+                (produits structurés), <a href="https://www.qub.ac.uk">Queen's University Belfast</a>
+                (recherche quantitative)</li>
+              <li>Focus : pricing/structuration de dérivés, risque (EVT, VaR, CVaR), backtesting, mathématiques financière</li>
+            </ul>
+            <ul class="lang-en">
+              <li>Engineer (<a href="https://www.centrale-mediterranee.fr">Centrale Méditerranée</a>) focused on market finance & quantitative analysis</li>
+              <li>Experience: <a href="https://www.societegenerale.com">SG CIB</a>
+                (structured products), <a href="https://www.qub.ac.uk">Queen's University Belfast</a>
+                (quantitative research)</li>
+              <li>Focus: derivatives pricing/structuring, risk (EVT, VaR, CVaR), backtesting, financial mathematics</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>
+              <span>⭐</span>
+              <span class="lang-fr">Points forts</span>
+              <span class="lang-en">Key Strengths</span>
+            </h3>
+            <ul class="lang-fr">
+              <li>Rigueur math/stat & curieux & volonté d'apprentissage et de contribution</li>
+              <li>Industrialisation : Git, tests, automatisation</li>
+              <li>Communication FR/EN/AR</li>
+            </ul>
+            <ul class="lang-en">
+              <li>Mathematical/statistical rigor & curiosity & willingness to learn and contribute</li>
+              <li>Industrialization: Git, testing, automation</li>
+              <li>Communication FR/EN/AR</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>
+              <span>📍</span>
+              <span class="lang-fr">Localisation</span>
+              <span class="lang-en">Location</span>
+            </h3>
+            <ul class="lang-fr">
+              <li>Paris, France (mobilité Europe)</li>
+            </ul>
+            <ul class="lang-en">
+              <li>Paris, France (European mobility)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section alt fade-in-element">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-fr">Expériences</span>
+          <span class="lang-en">Experience</span>
+        </h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <span>📅</span>
+                <span class="lang-fr">Août 2025 – Janv. 2026 · <a href="https://www.societegenerale.com">Société Générale CIB</a>
+                 · Casablanca · Maroc</span>
+                <span class="lang-en">Aug 2025 – Jan 2026 · <a href="https://www.societegenerale.com">Société Générale CIB</a> · Casablanca · Morocco</span>
+              </div>
+              <div class="timeline-title">
+                <span class="lang-fr">Structured Products Engineer - Stagiaire</span>
+                <span class="lang-en">Structured Products Engineer - Intern</span>
+              </div>
+              <div class="timeline-desc">
+                <ul class="lang-fr">
+                  <li>Support pricing et backtest de produits structurés & validation des docs juridiques vs paramètres de marché</li>
+                  <li>Outils d'automatisation pour accélérer les contrôles time‑to‑market</li>
+                  <li>Contribution aux templates de nouveaux produits (en collaboration avec EMI Paris & Pricing)</li>
+                </ul>
+                <ul class="lang-en">
+                  <li>Pricing and backtest support for structured products & validation of legal docs vs market parameters</li>
+                  <li>Automation tools to accelerate time-to-market controls</li>
+                  <li>Contribution to new product templates (in collaboration with EMI Paris & Pricing)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <span>📅</span>
+                <span class="lang-fr">Fév. 2025 – Juil. 2025 · <a href="https://www.qub.ac.uk">Queen's University Belfast</a>
+                    · Belfast · Royaume-Uni</span>
+                <span class="lang-en">Feb 2025 – Jul 2025 · <a href="https://www.qub.ac.uk">Queen's University Belfast</a>
+                    · Belfast · United Kingdom</span>
+              </div>
+              <div class="timeline-title">
+                <span class="lang-fr">Quantitative Researcher - Stagiaire</span>
+                <span class="lang-en">Quantitative Researcher - Intern</span>
+              </div>
+              <div class="timeline-desc">
+                <ul class="lang-fr">
+                  <li>Cadre EVT (Extreme Value Theory) sur 28 banques systémiquement importante, β<sub>T</sub> dynamique (Hill & dépendance de queue)</li>
+                  <li>Early‑warning ML Model (XGBoost) : horizon 8–10 semaines; AUC ≈ 0,58</li>
+                  <li>Stress tests avec retombées; contagion transfrontalière documentée</li>
+                  <li>Publication d'un papier de recherche SSRN</li>
+                </ul>
+                <ul class="lang-en">
+                  <li>EVT (Extreme Value Theory) framework on 28 systemically important banks, dynamic β<sub>T</sub> (Hill & tail dependence)</li>
+                  <li>Early-warning ML Model (XGBoost): 8–10 weeks horizon; AUC ≈ 0.58</li>
+                  <li>Stress tests with spillovers; documented cross-border contagion</li>
+                  <li>Publication of research paper on SSRN</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <span>📅</span>
+                <span class="lang-fr">Déc. 2023 – Janv. 2025 · <a href="https://www.amse-aixmarseille.fr">AMSE (Aix-Marseille School of Economics)</a>
+                    · Marseille</span>
+                <span class="lang-en">Dec 2023 – Jan 2025 · <a href="https://www.amse-aixmarseille.fr">AMSE (Aix-Marseille School of Economics)</a>
+                    · Marseille</span>
+              </div>
+              <div class="timeline-title">
+                <span class="lang-fr">Research Assistant - Apprenti</span>
+                <span class="lang-en">Research Assistant - Apprentice</span>
+              </div>
+              <div class="timeline-desc">
+                <ul class="lang-fr">
+                  <li>Test de la loi empirique de Zipf sur hiérarchies urbaines multi‑pays; protocoles de validation statistique</li>
+                  <li>Collecte, nettoyage, reproduction & rédaction scientifique</li>
+                </ul>
+                <ul class="lang-en">
+                  <li>Testing Zipf's empirical law on multi-country urban hierarchies; statistical validation protocols</li>
+                  <li>Data collection, cleaning, reproduction & scientific writing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <span>📅</span>
+                <span class="lang-fr">Juil. 2024 – Août 2024 · <a href="https://www.ocpgroup.ma">OCP Group</a>
+                    · Maroc</span>
+                <span class="lang-en">Jul 2024 – Aug 2024 · <a href="https://www.ocpgroup.ma">OCP Group</a>
+                    · Morocco</span>
+              </div>
+              <div class="timeline-title">
+                <span class="lang-fr">Business Analyst - Stagiaire</span>
+                <span class="lang-en">Business Analyst - Intern</span>
+              </div>
+              <div class="timeline-desc">
+                <ul class="lang-fr">
+                  <li>Application des modèles d'évaluation DCF à des projets d'investissement en capital de plus de 2 500 000 MAD, optimisant l'allocation du budget de maintenance pour maximiser la rentabilité des actifs dans les installations de production de phosphate</li>
+                </ul>
+                <ul class="lang-en">
+                  <li>Applied DCF valuation models to capital investment projects over 2,500,000 MAD, optimizing maintenance budget allocation to maximize asset profitability in phosphate production facilities</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section fade-in-element">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-fr">Projets sélectionnés</span>
+          <span class="lang-en">Selected Projects</span>
+        </h2>
+        <div class="projects">
+          <article class="project-card">
+            <h3 class="project-title">
+              <span>📈</span>
+              Portfolio Optimizer – CAPM
+            </h3>
+            <div class="project-desc">
+              <span class="lang-fr">Application complète d'optimisation de portefeuille avec calculs CAPM, frontière efficiente et métriques de risque avancées.</span>
+              <span class="lang-en">Complete portfolio optimization application with CAPM calculations, efficient frontier and advanced risk metrics.</span>
+            </div>
+            <ul class="lang-fr">
+              <li>Calcul α/β, CAL, frontière efficiente; allocation optimale</li>
+              <li>Diagnostics visuels & rapports; UX pédagogique</li>
+              <li>Calcul de VaR, CVaR, et autres métriques de risques pour les actions equity, VaR pour taux d'intérêts (PV01)</li>
+            </ul>
+            <ul class="lang-en">
+              <li>α/β calculation, CAL, efficient frontier; optimal allocation</li>
+              <li>Visual diagnostics & reports; educational UX</li>
+              <li>VaR, CVaR calculation, and other risk metrics for equity stocks, VaR for interest rates (PV01)</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-link" href="https://portfolio-optimizer-capm.streamlit.app" target="_blank">
+                <span>🔗</span>
+                <span class="lang-fr">Voir la démo</span>
+                <span class="lang-en">View Demo</span>
+              </a>
+              <a class="project-link secondary" href="https://github.com/RedaSalhi" target="_blank">
+                <span>💻</span>
+                <span class="lang-fr">Code</span>
+                <span class="lang-en">Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3 class="project-title">
+              <span>🧮</span>
+              Derivatives Pricing Suite
+            </h3>
+            <div class="project-desc">
+              <span class="lang-fr">Suite complète de pricing pour dérivés avec méthodes analytiques et numériques, visualisation P&L interactive.</span>
+              <span class="lang-en">Complete derivatives pricing suite with analytical and numerical methods, interactive P&L visualization.</span>
+            </div>
+            <ul class="lang-fr">
+              <li>BS, Binomial, Monte Carlo (réduction de variance), modèles de taux (Vasicek)</li>
+              <li>Greeks & stratégies multi‑jambes; visualisation P&L interactive</li>
+              <li>Pricing d'Options Vanilles et Exotiques (Lookback, Digitales, Asiatiques, Barrières), Contrats Forwards, Options sur Obligations</li>
+            </ul>
+            <ul class="lang-en">
+              <li>BS, Binomial, Monte Carlo (variance reduction), interest rate models (Vasicek)</li>
+              <li>Greeks & multi-leg strategies; interactive P&L visualization</li>
+              <li>Pricing of Vanilla and Exotic Options (Lookback, Digital, Asian, Barrier), Forward Contracts, Bond Options</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-link" href="https://derivatives-pricing.streamlit.app/" target="_blank">
+                <span>🔗</span>
+                <span class="lang-fr">Voir la démo</span>
+                <span class="lang-en">View Demo</span>
+              </a>
+              <a class="project-link secondary" href="https://github.com/RedaSalhi" target="_blank">
+                <span>💻</span>
+                <span class="lang-fr">Code</span>
+                <span class="lang-en">Code</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3 class="project-title">
+              <span>📊</span>
+              <span class="lang-fr">Systemic Risk in Global Banking</span>
+              <span class="lang-en">Systemic Risk in Global Banking</span>
+            </h3>
+            <div class="project-desc">
+              <span class="lang-fr">Recherche avancée sur le risque systémique bancaire utilisant la théorie des valeurs extrêmes et le machine learning.</span>
+              <span class="lang-en">Advanced research on banking systemic risk using extreme value theory and machine learning.</span>
+            </div>
+            <ul class="lang-fr">
+              <li>Calcul du risque β<sub>T</sub> systémique en utilisant la EVT</li>
+              <li>Étude du Stress-Testing d'événements extrêmes et effet contagion</li>
+              <li>Implémentation d'un modèle de prédiction de risque systémique en Machine Learning</li>
+            </ul>
+            <ul class="lang-en">
+              <li>Systemic risk β<sub>T</sub> calculation using EVT</li>
+              <li>Extreme event stress testing and contagion effect study</li>
+              <li>Implementation of systemic risk prediction model using Machine Learning</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5360381" target="_blank">
+                <span>📄</span>
+                <span class="lang-fr">Lire sur SSRN</span>
+                <span class="lang-en">Read on SSRN</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="section alt fade-in-element">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-fr">Compétences</span>
+          <span class="lang-en">Skills</span>
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>
+              <span>🐍</span>
+              <span class="lang-fr">Programmation Python</span>
+              <span class="lang-en">Python Programming</span>
+            </h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>NumPy/Pandas</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Expert</span>
+                  <span class="lang-en">Expert</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>SciPy/Statsmodels</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Avancé</span>
+                  <span class="lang-en">Advanced</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Scikit-learn</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Avancé</span>
+                  <span class="lang-en">Advanced</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3>
+              <span>📈</span>
+              <span class="lang-fr">Finance Quantitative</span>
+              <span class="lang-en">Quantitative Finance</span>
+            </h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span class="lang-fr">Dérivés (BS, MC, Binomial, Hull-White, Vasicek, Heston)</span>
+                <span class="lang-en">Derivatives (BS, MC, Binomial, Hull-White, Vasicek, Heston)</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Expert</span>
+                  <span class="lang-en">Expert</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="97"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span class="lang-fr">Gestion de Risque (VaR, CVaR)</span>
+                <span class="lang-en">Risk Management (VaR, CVaR)</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Expert</span>
+                  <span class="lang-en">Expert</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="100"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>EVT & Stress Testing</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Expert</span>
+                  <span class="lang-en">Expert</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span class="lang-fr">Optimisation de Portefeuille</span>
+                <span class="lang-en">Portfolio Optimization</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Avancé</span>
+                  <span class="lang-en">Advanced</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>
+              <span>🗄️</span>
+              <span class="lang-fr">Données & Outils</span>
+              <span class="lang-en">Data & Tools</span>
+            </h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>SQL</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Intermédiaire</span>
+                  <span class="lang-en">Intermediate</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Excel/VBA</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Avancé</span>
+                  <span class="lang-en">Advanced</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Git/GitHub</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Intermédiaire</span>
+                  <span class="lang-en">Intermediate</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Bloomberg Terminal</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Faux Débutant</span>
+                  <span class="lang-en">False Beginner</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="45"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>
+              <span>🌍</span>
+              <span class="lang-fr">Langues</span>
+              <span class="lang-en">Languages</span>
+            </h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span class="lang-fr">Français</span>
+                <span class="lang-en">French</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Bilingue</span>
+                  <span class="lang-en">Bilingual</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="100"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span class="lang-fr">Arabe</span>
+                <span class="lang-en">Arabic</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Bilingue</span>
+                  <span class="lang-en">Bilingual</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="100"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span class="lang-fr">Anglais</span>
+                <span class="lang-en">English</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Courant</span>
+                  <span class="lang-en">Fluent</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span class="lang-fr">Italien</span>
+                <span class="lang-en">Italian</span>
+                <span class="skill-level">
+                  <span class="lang-fr">Faux Débutant</span>
+                  <span class="lang-en">False Beginner</span>
+                </span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="35"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section fade-in-element">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-fr">Éducation</span>
+          <span class="lang-en">Education</span>
+        </h2>
+        <div class="cards">
+          <article class="card">
+            <h3>
+              <span>🏛️</span>
+              <span class="lang-fr"><a href="https://www.centrale-mediterranee.fr">Centrale Méditerranée</a>
+                – Marseille, France</span>
+              <span class="lang-en"><a href="https://www.centrale-mediterranee.fr">Centrale Méditerranée</a>
+                – Marseille, France</span>
+            </h3>
+            <h4 style="color: var(--primary); margin-bottom: 10px;">
+              <span class="lang-fr">Diplôme d'ingénieur – Ingénierie financière (2023 – présent)</span>
+              <span class="lang-en">Engineering Degree – Financial Engineering (2023 – present)</span>
+            </h4>
+            <ul class="lang-fr">
+              <li>Principaux : Processus stochastiques, Analyse numérique, Théorie de la mesure, Théorie de portefeuille</li>
+              <li>Spécialisation en mathématiques financières et modélisation quantitative</li>
+            </ul>
+            <ul class="lang-en">
+              <li>Core: Stochastic processes, Numerical analysis, Measure theory, Portfolio theory</li>
+              <li>Specialization in financial mathematics and quantitative modeling</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>
+              <span>🎓</span>
+              <span class="lang-fr"><a href="https://www.qub.ac.uk">Queen's University Belfast</a>
+                – Royaume‑Uni</span>
+              <span class="lang-en"><a href="https://www.qub.ac.uk">Queen's University Belfast</a>
+                – United Kingdom</span>
+            </h3>
+            <h4 style="color: var(--primary); margin-bottom: 10px;">
+              <span class="lang-fr">Semestre d'échange (2025)</span>
+              <span class="lang-en">Exchange Semester (2025)</span>
+            </h4>
+            <ul class="lang-fr">
+              <li>Cours : Modélisation financière Python, Dérivés avancés, Processus stochastiques</li>
+              <li>Recherche en finance quantitative et risque systémique</li>
+            </ul>
+            <ul class="lang-en">
+              <li>Courses: Python Financial Modeling, Advanced Derivatives, Stochastic Processes</li>
+              <li>Research in quantitative finance and systemic risk</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>
+              <span>🏫</span>
+              <span class="lang-fr"><a href="https://lyc-blaise-pascal-clermont.ent.auvergnerhonealpes.fr">Lycée Blaise Pascal</a>
+                – Clermont‑Ferrand, France</span>
+              <span class="lang-en"><a href="https://lyc-blaise-pascal-clermont.ent.auvergnerhonealpes.fr">Lycée Blaise Pascal</a>
+                – Clermont‑Ferrand, France</span>
+            </h3>
+            <h4 style="color: var(--primary); margin-bottom: 10px;">
+              <span class="lang-fr">CPGE MPSI‑MP* (2021 – 2023)</span>
+              <span class="lang-en">CPGE MPSI‑MP* (2021 – 2023)</span>
+            </h4>
+            <ul class="lang-fr">
+              <li>Maths avancées, algèbre linéaire, probabilités, méthodes numériques</li>
+              <li>Python, Physique-Chimie, Philosophie</li>
+            </ul>
+            <ul class="lang-en">
+              <li>Advanced mathematics, linear algebra, probability, numerical methods</li>
+              <li>Python, Physics-Chemistry, Philosophy</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt fade-in-element">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="icon">📍</div>
+            <div>
+              <strong>Paris, France</strong>
+              <small class="lang-fr">Mobilité Europe</small>
+              <small class="lang-en">European Mobility</small>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">📞</div>
+            <a href="tel:+33658298019">+33 6 58 29 80 19</a>
+          </div>
+          <div class="contact-item">
+            <div class="icon">✉️</div>
+            <a href="mailto:salhi.reda47@gmail.com">salhi.reda47@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <div class="icon">💼</div>
+            <a href="https://www.linkedin.com/in/reda-salhi-195297290/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="contact-item">
+            <div class="icon">💻</div>
+            <a href="https://github.com/RedaSalhi" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        © <span id="year"></span> Reda Salhi • 
+        <span class="lang-fr">CV digital • Créé avec passion</span>
+        <span class="lang-en">Digital CV • Created with passion</span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      document.getElementById('loader').classList.add('hide');
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Language Toggle
+    const langToggle = document.getElementById('langToggle');
+    const body = document.body;
+    
+    function setLanguage(lang) {
+      body.setAttribute('data-lang', lang);
+      langToggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('language', lang);
+      
+      // Update document language
+      document.documentElement.setAttribute('lang', lang);
+    }
+
+    // Initialize language
+    const savedLang = localStorage.getItem('language') || 'fr';
+    setLanguage(savedLang);
+
+    langToggle.addEventListener('click', () => {
+      const currentLang = body.getAttribute('data-lang');
+      setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          // Animate skill bars
+          if (entry.target.classList.contains('skill-category')) {
+            const progressBars = entry.target.querySelectorAll('.skill-progress');
+            progressBars.forEach(bar => {
+              const width = bar.getAttribute('data-width');
+              setTimeout(() => {
+                bar.style.width = width + '%';
+              }, 300);
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements
+    document.querySelectorAll('.fade-in-element, .card, .project-card, .timeline-item, .skill-category').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    function setTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+      
+      // Update meta theme color
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+      metaTheme.setAttribute('content', theme === 'dark' ? '#0f172a' : '#6366f1');
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Parallax effect for hero
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+      }
+    });
+
+    // Reduce motion for accessibility
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('*').forEach(el => {
+        el.style.animation = 'none';
+        el.style.transition = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
